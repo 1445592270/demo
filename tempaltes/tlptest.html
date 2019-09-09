@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+姓名:{{ name }}<br>
+年龄:{{ age }}<br>
+爱好:{{ hobby }}<br>
+爱好1:{{ hobby.0 }}<br>
+成绩:{{ score }}<br>
+成绩1:{{ score.math }}
+{% if age > 18 and age < 40 %}
+    <p>青壮年</p>
+    {% elif age >= 40 %}
+    <p>中年</p>
+    {% else %}
+    <p>少年</p>
+{% endif %}
+<ol>
+    {% for i in hobby %}
+    <li>{{ i }}</li>
+    {% endfor %}
+</ol>
+{% for key,val in score.items %}
+    <p>{{ key }}:{{ val }}</p>
+{% endfor %}
+{% for i in hobby reversed %}
+    {% if forloop.first %}
+        <p>{{ forloop.counter }}.{{ i }}</p>
+    {% elif forloop.last %}
+        <p style="color: red">{{ forloop.counter }}.{{ i }}</p>
+    {% else %}
+        <p style="color: blue">{{ forloop.counter }}.{{ i }}</p>
+    {% endif %}
+{% endfor %}
+</body>
+</html>
