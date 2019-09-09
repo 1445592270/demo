@@ -32,3 +32,14 @@ def tpltest(request,age):
     score={'math':100,'chinese':99,'english':98}
     # return render(request,'tlptest.html',{'name':name,'age':age,'hobby':hobby,'score':score})
     return render(request,'tlptest.html',locals())
+
+
+
+def beautifuldemo(request):
+    params= [
+        {"name":"bea1","img":"1.jpg","url":"https://baike.baidu.com/item/%E7%89%B9%E9%9B%B7%E8%A5%BF%C2%B7%E9%BA%A6%E6%A0%BC%E9%9B%B7%E8%BF%AA/6118977?fromtitle=%E9%BA%A6%E8%BF%AA&fromid=136057&fr=aladdin"},
+        {"name":"bea2","img":"2.jpg","url":"https:www.baidu.com"},
+        {"name":"bea3","img":"3.png","url":"https:www.sina.com"},
+        {"name":"bea4","img":"4.jpg","url":"https:www.taobao.com"},
+    ]
+    return render(request,'beademo.html',locals())

@@ -24,5 +24,6 @@ urlpatterns = [
     path('html/',views.html),
     path('indextmp/',views.indextmp),
     # path('tpltest/',views.tpltest)
-    re_path('tpltest/(\d+)', views.tpltest)
+    re_path('tpltest/(\d+)', views.tpltest),
+    path('beautifuldemo/',views.beautifuldemo),
 ]
