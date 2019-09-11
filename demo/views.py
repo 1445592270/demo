@@ -30,6 +30,11 @@ def tpltest(request,age):
     age=int(age)
     hobby=['eat','sleep','shopping']
     score={'math':100,'chinese':99,'english':98}
+    myjs="""
+           <script>
+              alert('啊哈哈哈哈!!!')
+           </script>
+    """
     # return render(request,'tlptest.html',{'name':name,'age':age,'hobby':hobby,'score':score})
     return render(request,'tlptest.html',locals())
 
